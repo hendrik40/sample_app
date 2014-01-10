@@ -1,4 +1,5 @@
 SampleApp::Application.routes.draw do
+  get "user/new"
   get "users/new"
   get "static_pages/signup"
 
