@@ -2,6 +2,11 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
+    if signed_in? 
+      @user = User.find(params[:id])
+    else 
+      render '/sessions/new'
+    end
   end
 
   def new
@@ -22,6 +27,8 @@ class UsersController < ApplicationController
       render 'new'
     end
   end
+
+
 
   private
 

@@ -16,6 +16,6 @@ class SessionsController < ApplicationController
 
   def destroy
     sign_out
-    redirect_to "/sessions/new"
+    redirect_to "/static_pages/home"
   end
 end
